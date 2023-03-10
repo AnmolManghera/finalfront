@@ -13,7 +13,7 @@ export default function Homepage() {
 
   useEffect(()=> {
     const fetchPosts = ()=>{
-      const res = axios.get("/api/posts").then((res)=> setPosts(res.data));
+      const res = axios.get("https://actualbackver2.onrender.com/api/posts").then((res)=> setPosts(res.data));
       console.log(res);
     }
     fetchPosts();
