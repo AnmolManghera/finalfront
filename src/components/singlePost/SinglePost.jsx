@@ -25,7 +25,7 @@ export default function SinglePost() {
   useEffect(() => {
     const getPost = async () => {
 
-      const res = await axios.get("/api/posts/" + path);
+      const res = await axios.get("https://actualbackver2.onrender.com/api/posts/" + path);
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.desc);
@@ -35,7 +35,7 @@ export default function SinglePost() {
 
   const handleDelete = async()=>{
     try{
-      await axios.delete("/api/posts/" + path,{data:{username:user.username}});
+      await axios.delete("https://actualbackver2.onrender.com/api/posts/" + path,{data:{username:user.username}});
       window.location.replace("/");
     }catch(err){}
   }
