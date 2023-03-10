@@ -52,7 +52,7 @@ import { Container } from 'react-bootstrap';
 function Category() {
   const [cat,setCats] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5000/api/categories").then((res)=> setCats(res.data))
+    axios.get("https://actualbackver2.onrender.com/api/categories").then((res)=> setCats(res.data))
   }, [])
   
   return (
