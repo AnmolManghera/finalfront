@@ -19,7 +19,7 @@ function CreatePost() {
       desc,
     };
     try{
-      const res = await axios.post("/api/posts",newPost);
+      const res = await axios.post("https://actualbackver2.onrender.com/api/posts",newPost);
       window.location.replace("/post/" + res.data._id);
     }catch(err){
       console.log(err);
